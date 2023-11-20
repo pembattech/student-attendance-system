@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($usernameErr) && empty($passwordErr)) {
         if (authenticateUser($inputUsername, $inputPassword)) {
             // Authentication successful, redirect to dashboard or home page
-            header("Location: base.php");
+            header("Location: index.php");
             exit();
         } else {
             // Authentication failed, display an error message

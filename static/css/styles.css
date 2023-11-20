@@ -5,31 +5,131 @@ select-style
 hover-style
 */
 
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
 li {
-    list-style-type: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-/* base.php */
+li:hover {
+    background-color: #34495e;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-top: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #ecf0f1;
+}
+
+label {
+    font-size: 14px;
+}
+
+.error {
+    color: red;
+}
+
+.form-title {
+    border-bottom: 1px solid #2c3e50;
+}
+
+.input-style {
+    margin-top: 4px;
+    padding: 3px;
+    font-size: 16px;
+}
+
+form .error {
+    font-size: 14px;
+}
+
 .navbar {
-    background-color: white;
-    border-bottom: 1px solid black;
-}
-.navbar .topbar-flex {
-    display: flex;
-    flex-direction: row;
+    background-color: #3498db;
+    color: #fff;
+    padding: 0 10px;
 }
 
-.navbar .topbar-flex .user_tool {
-    margin-left: auto;
+.topbar-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.user_tool {
+    font-size: 16px;
 }
 
 .sidebar {
-    background-color: white;
-    position: fixed;
     width: 200px;
-}
-.sidebar li {
-    border-bottom: 1px solid black;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    height: 100vh;
 }
 
+.SidebarContainer-flex {
+    display: flex;
+}
 
+.container {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.user_tool {
+    cursor: pointer;
+}
+
+#user_tool_popup li {
+    padding: 5px 10px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    right: 2%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.popup.edit-account-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    width: 350px;
+    z-index: 1;
+}
