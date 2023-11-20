@@ -1,0 +1,35 @@
+/*
+input-style
+button-style
+select-style
+hover-style
+*/
+
+li {
+    list-style-type: none;
+}
+
+/* base.php */
+.navbar {
+    background-color: white;
+    border-bottom: 1px solid black;
+}
+.navbar .topbar-flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar .topbar-flex .user_tool {
+    margin-left: auto;
+}
+
+.sidebar {
+    background-color: white;
+    position: fixed;
+    width: 200px;
+}
+.sidebar li {
+    border-bottom: 1px solid black;
+}
+
+
