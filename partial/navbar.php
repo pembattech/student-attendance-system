@@ -52,9 +52,10 @@ include 'base.php';
         <br>
         <label for="editPassword">Password:</label><br>
         <input type="password" class="input-style" id="editPassword" name="editPassword">
+        <p id="hint">Leave this blank if you dont want to change the password.</p>
         <div class="error" id="passwordError"></div>
         <br>
-        <button type="button" id="saveChangesBtn">Save Changes</button>
+        <button type="button" class="button-style" id="saveChangesBtn">Save Changes</button>
     </form>
 </div>
 

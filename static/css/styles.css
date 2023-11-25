@@ -5,6 +5,24 @@ select-style
 hover-style
 */
 
+:root {
+    --mainTextColor-light: #000;
+    --secondaryTextColor-light: rgb(51 51 51);
+    --mainLinkColor-light: #0da2b8;
+    --mainBorderColor-light: rgb(218, 218, 218);
+    --mainBgColor-light: rgb(249, 250, 251);
+
+    --mainTextColor-dark: #fff;
+    --secondaryTextColor-dark: #adb0b1;
+    --mainLinkColor-dark: rgb(30, 190, 214);
+    --mainBorderColor-dark: #2b3031;
+    --mainBgColor-dark: #131415;
+}
+
+/* * {
+    color: var(--mainTextColor-light)
+} */
+
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
@@ -26,7 +44,7 @@ li:hover {
 }
 
 h1 {
-    color: #2c3e50;
+    color: var(--secondaryTextColor-light);
     margin-top: 0;
 }
 
@@ -43,14 +61,42 @@ label {
     color: red;
 }
 
-.form-title {
-    border-bottom: 1px solid #2c3e50;
+#hint {
+    font-size: 12px;
+    font-weight: 300px;
+    margin: 0;
+    font-style: italic;
 }
 
-.input-style {
-    margin-top: 4px;
-    padding: 3px;
+.form-title {
+    background-color: var(--mainBorderColor-light);
+    margin: 0;
+    padding: 10px;
     font-size: 16px;
+
+}
+
+.input-style, .textarea-style {
+    margin-top: 4px;
+    padding: 5px;
+    font-size: 16px;
+    outline: none;
+    border: 1px solid var(--mainBorderColor-light);
+    border-radius: 5px;
+    width: 98%;
+
+}
+
+.input-style:focus, .textarea-style:focus {
+    border-color: var(--mainBorderColor-dark);
+}
+
+.form-style {
+    padding: 20px;
+}
+
+.datatable-style {
+    padding: 20px;
 }
 
 form .error {
@@ -58,9 +104,11 @@ form .error {
 }
 
 .navbar {
-    background-color: #3498db;
-    color: #fff;
+    background-color: var(--secondaryTextColor-light);
     padding: 0 10px;
+    top: 0;
+    position: sticky;
+    z-index: 1;
 }
 
 .topbar-flex {
@@ -72,17 +120,20 @@ form .error {
 .title {
     font-size: 18px;
     font-weight: 900;
+    color: #ecf0f1;
 }
 
 .user_tool {
     font-size: 16px;
+    color: #ecf0f1;
 }
 
 .sidebar {
     width: 200px;
-    background-color: #2c3e50;
+    background-color: var(--mainBorderColor-dark);
     color: #ecf0f1;
     height: 100vh;
+    position: fixed;
 }
 
 .SidebarContainer-flex {
@@ -91,7 +142,9 @@ form .error {
 
 .container {
     flex: 1;
-    padding: 0 20px;
+    padding: 10px 20px;
+    margin-left: 200px;
+    background-color: var(--mainBgColor-light);
 }
 
 .user_tool {
@@ -110,6 +163,16 @@ form .error {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+.popup.popup-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    width: 350px;
     z-index: 1;
 }
 
@@ -132,4 +195,27 @@ form .error {
     padding: 15px;
     width: 350px;
     z-index: 1;
+}
+
+
+/* course.php */
+.from_and_list_course-flex {
+    display: flex;
+    gap: 40px;
+}
+
+.course-form, .course-list {
+    border: 1px solid var(--mainBorderColor-light);
+    height: fit-content;
+}
+
+.course-form {
+    width: 350px;
+    top: 68px;
+    position: sticky;
+    height: fit-content;
+}
+
+.course-list {
+    width: 715px;
 }

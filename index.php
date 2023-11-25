@@ -12,5 +12,3 @@ include 'partial/navbar.php';
         <p>Welcome</p>
     </div>
 </div>
-
-</body>

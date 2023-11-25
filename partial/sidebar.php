@@ -1,7 +1,7 @@
 <div class="sidebar">
     <ul>
         <li><a href="index.php">Dashboard</a></li>
-        <li><a href="#course">Course</a></li>
+        <li><a href="course.php">Course</a></li>
         <li><a href="#subject">Subject</a></li>
         <li><a href="#class">Class</a></li>
         <li><a href="#faculty">Faculty</a></li>
