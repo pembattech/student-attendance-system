@@ -219,3 +219,26 @@ form .error {
 .course-list {
     width: 715px;
 }
+
+
+/* subject.php */
+.from_and_list_subject-flex {
+    display: flex;
+    gap: 40px;
+}
+
+.subject-form, .subject-list {
+    border: 1px solid var(--mainBorderColor-light);
+    height: fit-content;
+}
+
+.subject-form {
+    width: 350px;
+    top: 68px;
+    position: sticky;
+    height: fit-content;
+}
+
+.subject-list {
+    width: 715px;
+}
